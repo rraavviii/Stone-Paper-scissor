@@ -1,0 +1,11 @@
+create user
+
+mongoosesetup
+schema creation
+model build
+usercreate -> password -> hash
+jwt token -> cookie
+
+
+for login part
+token->decrypt -> email

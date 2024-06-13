@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 16, 39);
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scroll for this example */
+}
+
+h1 {
+    background-color: rgb(6, 6, 60);
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Updated CSS */
+#logout-form {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#logout-btn {
+    background-color: rgb(24, 21, 36);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: rgb(44, 41, 56);
+}
+
+
+
+.mainc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 5rem);
+    padding: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid rgb(24, 61, 103);
+    border-radius: 10px;
+    background-color: rgb(14, 16, 65);
+    padding: 1rem;
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+#welcome-msg {
+    color: rgb(144, 198, 149);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.choice {
+    height: 80px;
+    width: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.choice:hover {
+    transform: scale(1.2);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgb(121, 171, 133);
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+#you, #userscore {
+    color: rgb(159, 47, 153);
+}
+
+#com, #compscore {
+    color: brown;
+}
+
+#userscore, #compscore {
+    font-size: 3rem;
+}
+
+.msgcontainer {
+    margin-top: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+#msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    background-color: rgb(24, 21, 36);
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .choices {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .choice {
+        height: 60px;
+        width: 60px;
+    }
+
+    #userscore, #compscore {
+        font-size: 2rem;
+    }
+
+    .scoreboard {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+    }
+}

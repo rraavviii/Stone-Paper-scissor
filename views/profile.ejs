@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile</title>
+</head>
+<body>
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+        <a class="text-blue-500" href="/">Back to home</a>
+        <h1 class="text-3xl mt-10 tracking-tighter mb-3">All users</h1>
+      
+        <div class="users flex gap-3 flex-wrap">
+            <% if(users.length > 0){ %>
+                <% users.forEach(function(user){ %>
+                    <div class="user w-80 p-4 bg-zinc-800 rounded-lg">
+                        <h3 class="text-xl mt-3 tracking-tighter">Username: <%= user.username %></h3>
+                        <h5 class="text-zinc-500">Email: <%= user.email %></h5>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <h3 class="text-zinc-500">No User Yet</h3>
+            <% } %>
+        </div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e66465, #9198e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            width: 70%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-section {
+            background: #4b4b8e;
+            padding: 30px;
+            color: white;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+        .form-section {
+            flex: 1;
+            padding: 40px;
+        }
+        .form-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .form-section input, .form-section select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-section input[type="radio"] {
+            width: auto;
+        }
+        .form-section label {
+            margin-right: 10px;
+        }
+        .form-section .gender {
+            margin-top: 10px;
+        }
+        .form-section .btn {
+            background: #1e90ff;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-section .btn:hover {
+            background: #0073e6;
+        }
+        .form-section .sign-in {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="https://www.shutterstock.com/image-vector/business-man-work-office-worker-600nw-2051967179.jpg" alt="Illustration">
+        </div>
+        <div class="form-section">
+            <h2>Registration</h2>
+            <form action="/create" method="post">
+                <input type="text" placeholder="Full Name" required name="username">
+                <input type="tel" placeholder="Phone number" required name="contact">
+                <input type="number" name="age" id="" placeholder="Age" required>
+                <input type="email" placeholder="Email" required name="email">
+                <input type="password" placeholder="Password" required name="password">
+                <button type="submit" class="btn">Sign Up</button>
+                <div class="sign-in">
+                    <p>Already have an account? <a href="login">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

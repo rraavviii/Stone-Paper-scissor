@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+   <h1>Rock Paper Scissor</h1>
+   <form action="/logout" id="logout-form">
+    <button id="logout-btn">Logout</button>
+</form>
+   <div class="mainc">
+       <div class="container">
+            <p id="welcome-msg">Welcome <%= currentUser.username %></p>
+            <div class="choices">
+                <div class="choice" id="rock">
+                    <img src="/images/rock.png" alt="Rock">
+                </div>
+                <div class="choice" id="paper">
+                    <img src="/images/paper.png" alt="Paper">
+                </div>
+                <div class="choice" id="scissor">
+                    <img src="/images/scissors.png" alt="Scissors">
+                </div>
+            </div>
+            
+            <div class="scoreboard">
+                <div class="score">
+                    <p id="userscore">0</p>
+                    <p id="you">You</p>
+                </div>
+                <div class="score">
+                    <p id="compscore">0</p>
+                    <p id="com">Comp</p>
+                </div>
+            </div>
+        
+            <div class="msgcontainer">
+                <p id="msg">Play Your Move</p>
+            </div>
+        
+        </div>
+    </div>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>
